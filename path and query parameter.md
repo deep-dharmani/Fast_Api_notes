@@ -8,4 +8,4 @@
 
 >                               In simple conclusion
 
-path parameter is a address for checking some specific thing and query is used to customising or filtering some thing from a data example program inside:stuedent_info.py.  
+path parameter is a address for checking some specific thing and query is used to customising or filtering some thing from a data example program inside: https://github.com/deep-dharmani/Fast_Api_notes/blob/main/practice_projects/stuedent_info.py.  
