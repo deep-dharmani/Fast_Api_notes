@@ -9,4 +9,4 @@ IF we are working on big application then we have knowledge about that how to ma
 5. we have to make file .gitignore using that we push our project important files to github.
 6. and in last we have to make a file named requirement.txt in that write all dependencies and packages for our that project.
 
-7. For example programme in progress.
+Example programme in progress.
