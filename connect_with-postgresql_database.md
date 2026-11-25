@@ -1,6 +1,6 @@
 1. Installation of postgresql database
 
-    1. First we have to install windows application locally so for that we have to go on this webside:https://www.enterprisedb.com/downloads/postgres-postgresql-downloads download that and install it and set a password which you remeber allways.
+    1. First we have to install application locally so for that we have to go on this webside:https://www.enterprisedb.com/downloads/postgres-postgresql-downloads download that according to your system and install it and set a password which you remeber allways.
     2. Then in teminal firstly setup the fastapi setup and then run that  command :
     >command:
 
@@ -21,16 +21,24 @@
 
     3. Open settings.py in Utils folder of our source folder using that we load our db_connection with fastapi using following things.
 
-            1. Write "from pydantic_settings import Basesetting,SettingsConfigDict".
+            1. Write **from pydantic_settings import Basesetting,SettingsConfigDict**.
 
-            2. write "from pathlib import path" and on next line write " BASE_Dir = Path(__file__).resolve().parents[2] "
+            2. write **from pathlib import path** and on next line write ** BASE_Dir = Path(__file__).resolve().parents[2] **
 
-            3. Make a class with name as settings give a parenthesis write "BaseSettings" in parenthesis.
+            3. Make a class with name as settings give a parenthesis write **BaseSettings** in parenthesis.
 
-            4. Inside that class create a variable with name model_config and in that variable write "SettingsConfigDict" and in parenthesis write " env_file= BASE_Dir/ ".env",extra="ignore" ".
+            4. Inside that class create a variable with name model_config and in that variable write **SettingsConfigDict** and in parenthesis write ** env_file= BASE_Dir/ ".env",extra="ignore" **.
 
-            5. Also write db_connection:str in that class and outside of class write " final_setting = Settings() ". 
+            5. Also write db_connection:str in that class and outside of class write " final_setting = settings() ". 
 
-    4. Now next we have to do configuration of db we do using sqlalchemy so for thta open db.py file
-and in that we do following things:
-            1. Write
+    4. Now next we have to do configuration of db we do using sqlalchemy so for thta open db.py file and in that we do following things:
+
+            1. Write **from sqlalchemy import create_engine** and on next line write **from sqlalchemy.orm import sessionmaker,declarative_base**.
+
+            2. write that **from {source file name}.utils.settings import  settings**.
+
+            3. create a variable with name base and in that write **declarative_base()** and create another variable with name engine in that write **create_engine(url=db_connection)**.
+
+            4. create another variable on next line in that write **sessionmaker(bind=engine)**.
+
+            5. Now we have to define a function with name 
