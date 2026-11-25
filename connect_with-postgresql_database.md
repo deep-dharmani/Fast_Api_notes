@@ -1,6 +1,6 @@
 1. ## Installation of postgresql database
 
-    1. First we have to install application locally so for that we have to go on this webside:https://www.enterprisedb.com/downloads/postgres-postgresql-downloads download that according to your system and install it and set a password which you remeber allways.
+    1. First we have to install application locally so for that we have to go on this website:                                                     https://www.enterprisedb.com/downloads/postgres-postgresql-downloads download that according to your system and install it and set a password which you remeber allways.
     2. Then in teminal firstly setup the fastapi system fot that project folder and then run that  command :
     >command:
 
