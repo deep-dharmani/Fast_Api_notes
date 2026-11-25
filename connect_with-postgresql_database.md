@@ -46,7 +46,3 @@
         6. Inside that function create a variable with name session write **local_session()**
 
         7. Using try and finally identation write **yield session** in try and in finally write **session.close()**
-
-    5. Now we have to connect these base and engine with our main.py so for that we do following things in our main.py.
-
-        1. 
