@@ -51,6 +51,6 @@ This repository is part of my self-learning journey in Python backend developmen
 
 **GitHub:** [deep-dharmani](https://github.com/deep-dharmani)
 
----
+---**Linkdin** [Deep Dharmani] (https://linkedin.com/in/deep-dharmani)
 
 ⭐ If you find these notes useful, consider giving this repository a star!
