@@ -1,7 +1,7 @@
 1. ## Installation of postgresql database
 
-    1. First we have to install application locally so for that we have to go on this webside:https://www.enterprisedb.com/downloads/postgres-postgresql-downloads download that according to your system and install it and set a password which you remeber allways.
-    2. Then in teminal firstly setup the fastapi system fot that project folder and then run that  command :
+    1. First we have to install application locally so for that we have to go on this website:                                                     https://www.enterprisedb.com/downloads/postgres-postgresql-downloads download that according                                      to your system and install it and set a password which you remeber allways.
+    3. Then in teminal firstly setup the fastapi system fot that project folder and then run that  command :
     >command:
 
             pip install sqlalchemy
@@ -49,20 +49,4 @@
 
     5. Now we have to connect these base and engine with our main.py so for that we do following things in our main.py.
 
-        1. Firstly write **from fastapi import FastApi** and create a variable in that write **FastApi()** and in parenthesis write *title=* that your fastapi application name you want.
-
-        2. On top write **from {source_folder}.utils.db import base,engine**.
-
-        3. Now write **base.metadata.create_all(engine)**.
-
-    6. now we do some things in feautures foder Now open model.py of feuture folder.
-
-        1. write **from sqlalchemy import Coloumn,String,Integer,Boolean**.
-
-        2. one more important thing we write on next line is **from {source file}.utils.db import base** because that base is responsible to connect our model or our main table to actual data base.
-
-        3. Now make a class and give name according to your feauture and in parenthesis write base.
-
-        4. In class create a variable with name __tablename__  in that write that your data name as you want in double code.
-
-        5. In class also write those things means coloumns for our that table so write all these in that form :{coloumn name}=Coloumn({Integer/String/Boolean}).
+        1. 
