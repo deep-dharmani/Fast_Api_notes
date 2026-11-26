@@ -1,6 +1,5 @@
 1. ## Installation of postgresql database
 
-    1. *First we have to install application locally so for that we have to go on this website:                                                     https://www.enterprisedb.com/downloads/postgres-postgresql-downloads download that according                                      to your system and check install guidence for windows on:https://www.enterprisedb.com/docs/supported-open-source/postgresql/installing/windows/ .*
     3. *Then in teminal firstly setup the fastapi system fot that project folder and then run that  command :*
     >*command:*
 
