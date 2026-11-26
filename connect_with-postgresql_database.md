@@ -1,10 +1,12 @@
 1. ## Installation of postgresql database
 
-    1.*First we have to install application locally so for that we have to go on this website:                                                     https://www.enterprisedb.com/downloads/postgres-postgresql-downloads download that according                                      to your system and install it and set a password which you remeber allways.*
-    3. *Then in teminal firstly setup the fastapi system fot that project folder and then run that  command :*
+    1. *First we have to install application locally so for that we have to go on this website: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads download that according to your system and check install guidence for windows on:https://www.enterprisedb.com/docs/supported-open-source/postgresql/installing/windows/ .*
+
+    2. *Then in teminal firstly setup the fastapi system fot that project folder and then run that  command :*
     >*command:*
 
             pip install sqlalchemy
+
     3. *After  that libraray for pydantic-settings helps us to load env variable in fastapi appliaction because env variables we configure for that we use this* 
     >*command:*
 
@@ -13,6 +15,7 @@
 2. ## Connecton with postgresql
 
     1. *open pgadmin windows in left bar open object explorer you seems server just tap on that again you seems a directory  right tap on that and you see properties in ending tap on that and in top, tap connection bar you see some details.*
+
     2. *read all details and in .env file of you project folder make a varibale named as db_connection and in that write that*
     >*link:*
 
@@ -49,7 +52,7 @@
 
     5. *Now we have to connect these base and engine with our main.py so for that we do following things in our main.py.*
 
-        1. *Firstly write **from fastapi import FastApi** and create a variable in that write **FastApi()** and in parenthesis write *title=* that your fastapi application name you want.*
+        1. *Firstly write **from fastapi import FastApi,Depends** and create a variable in that write **FastApi()** and in parenthesis write *title=* that your fastapi application name you want.*
 
         2. *On top write **from {source_folder}.utils.db import base,engine**.*
 
@@ -65,7 +68,7 @@
 
         4. *In class create a variable with name __tablename__  in that write that your data name as you want in double code.*
 
-        5. *In class also write those things means coloumns for our that table so write all these in that form :{coloumn name}=Coloumn({Integer/String/Boolean}).*
+        5. *In class also write those coloumns for our that table so write all these in that form :{coloumn name}=Coloumn({Integer/String/Boolean}).*
  
     7. *Now we cretae seprate routes so we have to open router.py file and do following things:*
 
@@ -75,4 +78,22 @@
 
         3. *Now open main.py file and we connect that our router with main code so for that first we have to write **from src.{feuture file name}.router import {variable where APIRouter is stored }** and also write **{variable where we stored FastApi()}.include_router({that imported variable from router file})***
 
-        4. *Now open *
+    8. *Now open dtos.py where we have to write all requirement for our request body using pydantic so for that*
+
+        1. *write **from pydantic import BaseModel***
+
+        2. *Make a class in parethesis write BaseModel*
+
+        3. *Inside that class write that your all requirement with their datatype and you can set default value that should be told as schema.*
+    
+    9. *Now we have to connect that schema with our router beacuse that data body should be recieved by our router.*
+
+        1. *In router file import class of request body which is in dtos file and also import get_db from db.py file of Utils folder* 
+
+        2. *Make a post param using that variable of APIRouter and in parenthesis of function that post param write**body:{that imported class from dtos.py file},db=Depends(get_db)***
+
+        3. *Now open controller.py import that schema class body of dtos.py file,also import that class of model.py file ,write **from sqlalchemy.orm import Session** and create a function in parenthesis of that function write**body:{imported schema class},db:Session**,make a variable with name as data another with new_table , in data variable write**body.model_dump()** ,in new_table write **{imported class}({name of that coloumn where you store first thing}=data["{that name by you stored that coloumn thing in schema class of dtos.py}"]) and write those all couloumns which you want in that parenthesis** and now outside of new_task on second line write **db.add(new_task)** , write**db.commit()**and in last write **db.refresh(new_task)***
+
+        4. Finally you have to go on your main.py file and just run that using uvicorn and give your request things.
+
+        5. open pgadmin and click on server,click on database and click on that maintance data name which you give in the ending of path of url,click on schemas and you can see that table name which you give just right click on that it shows view/edit click on that and click all rows rows you see that your given cloumn means it saves your that information which is given using your api
