@@ -96,4 +96,4 @@
 
         4. Finally you have to go on your main.py file and just run that using uvicorn and give your request things.
 
-        5. open pgadmin and click on server,click on database and click on that maintance data name which you give in the ending of path of url,click on schemas and you can see that table name which you give just right click on that it shows view/edit click on that and click all rows rows you see that your given cloumn means it saves your that information which is given using your api
+        5. open pgadmin and click on server,click on database and click on that maintance data name which you give in the ending of path of url,click on schemas and you can see that table name which you give just right click on that it shows view/edit click on that and click all rows rows you see that your given cloumn means it saves your that information which is given using your api.
