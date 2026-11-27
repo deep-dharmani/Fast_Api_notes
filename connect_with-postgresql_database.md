@@ -10,7 +10,7 @@
     3. *After  that libraray for pydantic-settings helps us to load env variable in fastapi appliaction because env variables we configure for that we use this* 
     >*command:*
 
-            pip install pydantic-settings
+       pip install pydantic-settings
 
 2. ## Connecton with postgresql
 
