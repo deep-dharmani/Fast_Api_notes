@@ -66,7 +66,7 @@
 
         3. *Now make a class and give name according to your feauture and in parenthesis write base.*
 
-        4. *In class create a variable with name **__tablename__**  in that write that your data name as you want in double code.*
+        4. *In class create a variable with name dunder **tablename**  in that write that your data name as you want in double code.*
 
         5. *In class also write those coloumns for our that table so write all these in that form :{coloumn name}=Coloumn({Integer/String/Boolean}).*
  
