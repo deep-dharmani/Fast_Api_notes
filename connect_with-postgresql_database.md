@@ -34,7 +34,7 @@
 
         5. *Also write **db_connection:str** in that class and outside of class write **final_setting = settings()**.*
 
-    4. *Now next we have to do configuration of db we do using sqlalchemy so for thta open db.py file and in that we do following things:*
+    4. *Now next we have to do configuration of db we do using sqlalchemy so for that open db.py file and in that we do following things:*
 
         1. *Write **from sqlalchemy import create_engine** and on next line write **from sqlalchemy.orm import sessionmaker,declarative_base*** .
 
