@@ -7,7 +7,7 @@ IF we are working on big application then we have knowledge about that how to ma
 5. we have to make file .gitignore using that we push our project important files to github.
 6. and in last we have to make a file named requirement.txt in that write all dependencies and packages for our that project.
 7. Inside that source folder we create another folders first folder with name as utils that connect with data base and others according to features of our that app.
-8. utils folder we have to make that all files which are used in that our other features folder as a supporting we have  create below files:
+8. In utils folder we have to make that all files which are used in that our other features folder as a supporting we have  create below files:
 
 >__init__.py:
 
