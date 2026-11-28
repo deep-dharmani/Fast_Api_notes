@@ -6,7 +6,7 @@
 
 2. *make a function with the name `get_one_row`.*
 
-3. *write **{Write the name of that row}:{Write the data_type of the data which is present in that row},db:Session** in the parentheses of that function.* 
+3. *write **{Write the name of that row}:{Write the data_type of the data which is present in that row},db=Depends(get_db)** in the parentheses of that function.* 
 
 4. *Make a variable in that variable with name one_row , write**db.querry({Class that is imported from model.py}).get()***
 
