@@ -4,7 +4,7 @@
 
 1. *In routers.py, make a get param Using route variable and in parentheses give endpoint as /get data/{one_row}.*
 
-2. *make a function with the name `get_one_row`.
+2. *make a function with the name `get_one_row`.*
 
 3. *write **{Write the name of that row}:{Write the data_type of the data which is present in that row},db:Session** in the parentheses of that function.* 
 
