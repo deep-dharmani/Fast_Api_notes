@@ -84,7 +84,7 @@
 
         2. *Make a class in parethesis write BaseModel*
 
-        3. *Inside that class write that your all requirement with their datatype and you can set default value that should be told as schema.*
+        3. *Inside that class write that your all requirement with their datatype and you can set default value and that requirement body should be told as schema body.*
     
     9. *Now we have to connect that schema with our router beacuse that data body should be recieved by our router.*
 
