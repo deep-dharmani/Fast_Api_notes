@@ -2,9 +2,7 @@
 
 ## Make a route to fetch specific data.
 
-1. *In routers.py, make a get param Using route variable and in parentheses give endpoint as /get data/{one_row}.*
-
-2. *make a function with the name `get_one_row`.*
+2. *make a function with the name `get_one_row` in controllers.py.*
 
 3. *write **{Write the name of that row}:{Write the data_type of the data which is present in that row},db=Depends(get_db)** in the parentheses of that function.* 
 
